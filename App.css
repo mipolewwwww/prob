@@ -1,0 +1,138 @@
+/* Основные стили приложения */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+  background-color: #2d2d2d;
+  min-height: 100vh;
+}
+
+/* Стили списка задач */
+.task-list-container {
+  max-width: 800px;
+  margin: 20px auto 0;
+  padding: 20px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Стили элемента задачи */
+.task-item {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Стили управления задачами */
+.task-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Стили выпадающего списка */
+.select-wrapper {
+  position: relative;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #a0a0a0;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.target-select {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+  border: 1px solid #5d5d5d;
+  border-radius: 6px;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  font-size: 16px;
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.3s ease;
+}
+
+.target-select:hover {
+  border-color: #7d7d7d;
+}
+
+.target-select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Стили кнопок */
+.move-btn, .delete-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.move-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.move-btn:hover {
+  background-color: #3d8b40;
+}
+
+.move-btn:disabled {
+  background-color: #3a4a3d;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+/* Стили для ошибки ассистента */
+.assistant-error {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+/* Иконка ассистента */
+.smartapp-native-panel {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.smartapp-native-panel:hover {
+  opacity: 0.8;
+}
